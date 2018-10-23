@@ -1,0 +1,13 @@
+http://localhost:8080/weather?lat=41.8842&lng=-87.6388
+http://localhost:8080/location?lat=41.8842&lng=-87.6388
+http://weatherserver.us-east-2.elasticbeanstalk.com//coordinates?text=mumbai
+http://weatherserver.us-east-2.elasticbeanstalk.com/location?lat=41.8842&lng=-87.6388
+http://localhost:8080/mylocation
+http://weatherserver.us-east-2.elasticbeanstalk.com/mylocation
+
+http://10.32.13.154:8080/location?lat=41.8842&lng=-87.6388
+
+https://api.darksky.net/forecast/0f9fe348e6d02681367462dc6646c813/41.8842,-87.6388
+
+https://geocoder.api.here.com/6.2/geocode.json?app_id=Pp0YmSEldf3bpBpTJcvj&app_code=3A5_nyHhOaOcSvGsb8Fk7A&searchtext=pune
+https://geocoder.api.here.com/6.2/geocode.json?app_id=Pp0YmSEldf3bpBpTJcvj&app_code=3A5_nyHhOaOcSvGsb8Fk7A&searchtext=pune

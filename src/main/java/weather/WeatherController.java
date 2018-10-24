@@ -24,14 +24,20 @@ class WeatherController{
     public ResponseEntity<JsonNode> getCurrentPosition(HttpServletRequest request) throws Exception{
         String ipAddress="";
         ipAddress = request.getHeader("X-Forwarded-For");
-        //System.out.println(ipAddress);
         if(ipAddress == null || ipAddress.isEmpty() || ipAddress.equals(""))
             ipAddress = request.getRemoteAddr();
         String key = "7af6f2d92eeed85c576c533ad90cdfa1";
         String reqUrl = "http://api.ipstack.com/"+ipAddress+"?access_key="+key;
         ResponseEntity<String> response = restTemplate.getForEntity(reqUrl,String.class);
+
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readTree(response.getBody());
+        String lat = root.get("latitude").toString();
+        String lng = root.get("longitude").toString();
+        reqUrl = "https://api.darksky.net/forecast/0f9fe348e6d02681367462dc6646c813/"+lat+","+lng;
+        response = restTemplate.getForEntity(reqUrl,String.class);
+        mapper = new ObjectMapper();
+        root = mapper.readTree(response.getBody());
         HttpHeaders headers = new HttpHeaders();
         headers.add("Access-Control-Allow-Origin","*");
         return ResponseEntity.status(response.getStatusCode()).headers(headers).body(root);

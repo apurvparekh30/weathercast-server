@@ -4,6 +4,7 @@ http://weatherserver.us-east-2.elasticbeanstalk.com//coordinates?text=mumbai
 http://weatherserver.us-east-2.elasticbeanstalk.com/location?lat=41.8842&lng=-87.6388
 http://localhost:8080/mylocation
 http://weatherserver.us-east-2.elasticbeanstalk.com/mylocation
+https://weatherserver.us-east-2.elasticbeanstalk.com/mylocation
 
 http://10.32.13.154:8080/location?lat=41.8842&lng=-87.6388
 
